@@ -6,19 +6,11 @@ function toggleMode() {
   const img = document.querySelector("#profile img")
   //substituir a imagem
   if (html.classList.contains("light")) {
-    img.setAttribute(
-      "src",
-      "./assets/avatar-light.png",
-      "alt",
-      "imagem de perfil do tema light"
-    )
+    img.setAttribute("src", "./assets/avatar-light.png")
+    img.setAttribute("alt", "imagem de perfil do tema light")
   } else {
     // se tiver sem light mode, mater a imagem normal
-    img.setAttribute(
-      "src",
-      "./assets/avatar.png",
-      "alt",
-      "imagem de perfil do tema dark"
-    )
+    img.setAttribute("src", "./assets/avatar.png")
+    img.setAttribute("alt", "imagem de perfil do tema dark")
   }
 }

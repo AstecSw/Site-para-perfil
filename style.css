@@ -37,7 +37,7 @@ body * {
   color: var(--text-color);
 }
 #container {
-  width: 100%;
+  width: 360px;
   max-width: 588;
   margin: 56px auto 0px;
   padding: 0 24px;
@@ -73,10 +73,13 @@ body * {
   left: 0;
   z-index: 1;
   transform: translateY(-50%);
+
+  animation: slide-out 0.4s;
 }
 .light #switch button {
   right: 0;
   left: initial;
+  animation: slide-in 0.4s forwards;
 }
 #switch span {
   display: block;
@@ -152,4 +155,22 @@ footer {
 footer a {
   text-decoration: none;
   font-size: 14px;
+}
+
+@keyframes slinde-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slinde-out {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
+  }
 }
