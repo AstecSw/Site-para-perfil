@@ -42,7 +42,7 @@ body * {
 }
 
 #container {
-  width: 100%;
+  width: 380px;
   max-width: 588;
   margin: 56px auto 0px;
   padding: 0 24px;
@@ -88,9 +88,11 @@ body * {
 }
 
 .light #switch button {
-  right: 0;
-  left: initial;
   animation: slide-in 0.4s forwards;
+}
+
+#switch button:hover {
+  outline: 8px solid var(--highlight-color);
 }
 
 #switch span {
@@ -185,9 +187,14 @@ footer a {
   }
 }
 
+@media (max-width:450px) {
+  #container {
+    width: 100%;
+  }
+}
 
-
-@keyframes slinde-in {
+/* animation */
+@keyframes slide-in {
   from {
     left: 0;
   }
@@ -197,7 +204,7 @@ footer a {
   }
 }
 
-@keyframes slinde-out {
+@keyframes slide-out {
   from {
     left: 50%;
   }
